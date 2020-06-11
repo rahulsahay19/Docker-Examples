@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     this.moviesService.getMovies().subscribe((movies: IMovie[])  => {
       this.movies = movies;
       console.log(this.movies);
+      console.table(this.movies);
     }, error => console.log(error));
   }
 }
